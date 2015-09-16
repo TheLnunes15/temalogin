@@ -1,0 +1,29 @@
+﻿***Tutorial do lightdm-another-gtk-greeter e lightdm-another-gtk-greeter-themes 
+
+Instalação: 
+  1º passo: Digite: "makepkg" (instale os programas que forem pedidos). 
+  2º passo: Depois de baixado-os, insiste em "makepkg". Caso contrário, ignore este passo. 
+  3º passo: Baixe o pacote "pacman -U pacote.tar.xz" (se for necessário entrar como root entre como: "user=su e password=nov@er@" ou "user=prodap e password=123456").
+  4º passo: Feito tudo isso, feche o terminal e continue com os próximos passos.
+
+_________________________________________________________________________________________
+
+***Tutorial do tema_ufs_dcomp
+
+Instalação: Antes de tudo abre o terminal e digite "thunar".
+  1º passo: Digite: "makepkg" (instale os programas que forem pedidos). 
+  2º passo: Substituir "style.css" no diretório: "/usr/share/lightdm-another-gtk-greeter/themes/" por "style1.css".
+  3º passo: Definir o tema "gtk-greeter-160" no diretório: "etc/lightdm/lightdm-another-gtk-greeter.conf".
+  4º passo: Definir a variável no tópico [SeatDefaults] em "greeter-session" no diretório: "etc/lightdm/lightdm.conf" para "lightdm-another-gtk-greeter", e "greeter-hide-users=true".
+  5º passo: Cole o arquivo "nuvem_2.jpg" no destino: "/usr/share/backgrounds".
+  6º passo: Não lembro qual o arquivo entre os passos 3 e 4 está o tema "background". Depois de encontrado, substitua com o seguinte destino: "/usr/share/backgrounds.../nuvem_2.jpg" que está na pasta background. 
+
+
+
+OBS: Não esqueça de descomentar na linha onde for alterada.
+
+Reinicie e computador e utilize os comandos especiais abaixo, caso o display não apareça ainda:
+
+systemctl disable sddm
+systemctl enable lightdm
+reboot
